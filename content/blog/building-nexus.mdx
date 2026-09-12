@@ -1,0 +1,37 @@
+---
+title: "building NEXUS"
+date: "2026-09-12"
+description: "what i'm trying to build with NEXUS, and why a portfolio project should feel like a real product."
+---
+
+NEXUS started as a portfolio project and slowly became something I actually want to keep using.
+
+The idea is straightforward: connect GitHub history, infrastructure signals and engineering context, then turn that history into useful intelligence instead of another dashboard full of noise.
+
+## the constraint
+
+I don't want NEXUS to look like a generic AI SaaS template. The interface is deliberately dense, monochrome and evidence-oriented. The product should feel like a tool first and a portfolio piece second.
+
+## the stack
+
+The current foundation is built around FastAPI, PostgreSQL, SQLAlchemy, Alembic and Docker. The model layer is designed around repositories, commits, pull requests, reviews, issues, releases, workflow runs and deployments.
+
+```text
+GitHub
+  ↓
+ingestion
+  ↓
+PostgreSQL
+  ↓
+analysis / ML
+  ↓
+engineering intelligence
+```
+
+## what comes next
+
+The next step is making the data useful: incremental ingestion, repository-level analytics, anomaly signals and an AI layer that can explain what changed and why it matters.
+
+That is the interesting part. A polished dashboard is nice. A system that can look at months of engineering history and tell you something you hadn't noticed is much more useful.
+
+> build the infrastructure first. make the interface earn its space.
